@@ -12,8 +12,8 @@ with st.container():
     st.write('---')
 
 colored_header(
-    st.subheader('Contents')
-    st.write('---')
+    label='Contents,
+    color(violet-70)
 )
 
 
