@@ -52,9 +52,5 @@ with st.container():
         nPP = st.text_input("nPP:")
     st.write('##')
     
-    if st.button("Calculate Future value of General Annuity"):
-        result = calculate_future_value(loan, time_years, period_time, interest_rate, nPP)
-        st.write(result)
-        result1 = r_n_location(interest_rate, period_time, nPP, time_years)
-        st.write(result1)
+    
 
