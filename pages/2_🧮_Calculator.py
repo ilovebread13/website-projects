@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 from streamlit_extras.let_it_rain import rain
+from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout='wide')
 
@@ -19,6 +20,9 @@ with st.container():
 with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
+    switch_pages = st.button('Go back to homepage')
+    if switch_pages:
+        switch_page('homepage')
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
     st.write('##')
 
