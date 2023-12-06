@@ -18,7 +18,7 @@ with st.container():
     st.subheader('🏠 Home')
     st.write('---')
     st.write('##')
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = st.columns(1, 1, 1)
     with col1:
         st.write('')
     with col2:
