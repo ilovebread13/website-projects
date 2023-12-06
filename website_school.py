@@ -5,7 +5,7 @@ st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout
 
 img_r_formula = Image.open('images/r_formula.png')
 img_n_formula = Image.open('images/n_formula.png')
-
+st.sidebar.success('Please select a page from above')
 
 with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
@@ -58,7 +58,6 @@ with st.container():
     st.write('##')
 
     with right_column:
-        st.write('##')
         st.image(img_r_formula)
         st.write('##')
         st.image(img_n_formula)
