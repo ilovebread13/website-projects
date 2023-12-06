@@ -18,8 +18,7 @@ with st.container():
     st.subheader('🏠 Home')
     st.write('---')
     st.write('##')
-    
-    st.markdown("<h2 style='text-align: center; color: black;'>Welcome to my website, for now, it will only contain two pages consisting of this and the calculator. </h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: white;'>.bigfont Welcome to my website, for now, it will only contain two pages consisting of this and the calculator. </h2>", unsafe_allow_html=True)
     st.write('##')
     st.write('---')
 
