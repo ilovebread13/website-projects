@@ -18,4 +18,10 @@ with st.container():
         color_name='violet-70',
     )
 
-
+with st.container():
+    rain(
+        emoji='❄',
+        font_size=16,
+        falling_speed=5,
+        animation_length='infinite',
+    )
