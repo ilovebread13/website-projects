@@ -7,7 +7,7 @@ st.set_page_config(page_title='Homepage', page_icon=':books:', layout='wide')
 
 st.sidebar.title('🏫 11-Palladium')
 st.sidebar.caption('Check out the current pages here')
-st.sidebar.markdown('Made by a student')
+st.sidebar.markdown('Made by a student ❤')
 st.sidebar.markdown('---')
 
 with st.container():
