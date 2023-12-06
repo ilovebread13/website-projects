@@ -58,6 +58,7 @@ with st.container():
     st.write('##')
 
     with right_column:
+        st.write('##')
         st.image(img_r_formula)
         st.write('##')
         st.image(img_n_formula)
