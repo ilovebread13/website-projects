@@ -55,8 +55,7 @@ with st.container():
     st.button("Show r value and n value")
     with right_column:
         result1 = r_n_location(interest_rate, period_time, nPP, time_years)
-        st.write('##')
-        st.write(result1)
+        st.write(result1, x=4, y=4)
 
     if st.button("Calculate Future value of General Annuity"):
         result = calculate_future_value(loan, time_years, period_time, interest_rate, nPP)
