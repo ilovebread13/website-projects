@@ -7,6 +7,7 @@ with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
     st.subheader('This is will be used to calculate the Future values for the performance task in General Mathematics')
+    
 def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
     try:
         loan = float(loan)
