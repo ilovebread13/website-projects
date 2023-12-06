@@ -7,6 +7,7 @@ with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
     st.subheader('This is will be used to calculate the Future values for the performance task in General Mathematics')
+    st.write('##')
     
 def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
     try:
@@ -23,7 +24,8 @@ def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
     P = loan / ((1 - (1+r) ** (-n)) / r)
     future_value = P * ((((1+r) ** n) - 1) / r)
 
-    return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}"
+    return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}
+    "
 
 
 
@@ -36,6 +38,10 @@ with st.container():
         interest_rate = st.text_input("Interest rate:")
         nPP = st.text_input("nPP:")
     st.write('##')
+
+    with right_column:
+        r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
+        n = time_years * nPP
 
 
     if st.button("Calculate Future value of General Annuity"):
