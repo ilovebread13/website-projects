@@ -42,7 +42,6 @@ def r_n_location(interest_rate, period_time, nPP):
     return f"Your r is: {r} 
              Your n is: {n}"
     
-
 with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
@@ -58,7 +57,7 @@ with st.container():
                 result1 = r_n_location(interest_rate, period_time, nPP)
                 st.write(result1)
         
-            if st.button("Calculate Future value of General Annuity"):
-                result = calculate_future_value(loan, time_years, period_time, interest_rate, nPP)
-                st.write(result)
+    if st.button("Calculate Future value of General Annuity"):
+        result = calculate_future_value(loan, time_years, period_time, interest_rate, nPP)
+        st.write(result)
    
