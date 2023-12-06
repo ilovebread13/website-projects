@@ -15,12 +15,12 @@ with st.container():
 with st.container():
     colored_header(
         label='Contents',
-        color_name='violet-70'
+        color_name='violet-70',
     )
 
 def rain():
     rain(
-        emoji=❄
-        falling_speed=5
-        animation_length='infinite'
+        emoji='❄',
+        falling_speed=5,
+        animation_length='infinite',
     )
