@@ -38,12 +38,11 @@ with st.container():
         nPP = st.text_input("nPP:")
     st.write('##')
 
-    with right_column:
-        
+    with right_column: 
         if st.button("Calculate Future value of General Annuity"):
-        result = calculate_future_value(loan, time_years, period_time, interest_rate, nPP)
-        st.write(result)
-        st.write('Your r is:', r)
-        st.write('Your n is:', n)
+            result = calculate_future_value(loan, time_years, period_time, interest_rate, nPP)
+            st.write(result)
+            st.write('Your r is:', r)
+            st.write('Your n is:', n)
 
    
