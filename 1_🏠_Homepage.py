@@ -14,10 +14,11 @@ with st.container():
     )
 
 with st.container():
-    col1, col2, col3 = st.columns(3)
+    
     st.subheader('🏠 Home')
     st.write('---')
     st.write('##')
+    col1, col2, col3 = st.columns(3)
     with col1:
         st.write('')
     with col2:
