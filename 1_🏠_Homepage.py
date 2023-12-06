@@ -27,6 +27,7 @@ with st.container():
     colored_header(
         label='Contents',
         color_name='violet-70',
+        description=''
     )
 def calculator():
     switch_pages = st.button('Go to Calculator!')
