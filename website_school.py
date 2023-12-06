@@ -65,7 +65,7 @@ with st.container():
         st.write(result1)
         
 with st.container():
-    left_column, right_column = st.columns(2, 1)
+    left_column, right_column = st.columns((2, 1))
     with right_column:
         st.image(img_r_formula)
         st.write('##')
