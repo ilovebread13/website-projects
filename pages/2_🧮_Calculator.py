@@ -1,11 +1,21 @@
 import streamlit as st
 from PIL import Image
+from streamlit_extras.let_it_rain import rain
 
 st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout='wide')
+
 
 img_r_formula = Image.open('images/r_formula.png')
 img_n_formula = Image.open('images/n_formula.png')
 st.sidebar.success('Please select a page from above')
+
+with st.container():
+     rain(
+        emoji='❄',
+        font_size=16,
+        falling_speed=5,
+        animation_length='infinite',
+    )
 
 with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
