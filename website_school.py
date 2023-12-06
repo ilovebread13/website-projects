@@ -17,7 +17,7 @@ def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
         interest_rate = float(interest_rate)
         nPP = float(nPP)
     except ValueError:
-        return ""
+        return "Invalid input. Please enter numerical values."
 
     n = time_years * nPP
     r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
@@ -35,7 +35,7 @@ def r_n_location(interest_rate, period_time, nPP, time_years):
         nPP = float(nPP)
 
     except ValueError:
-        return "Invalid input. Please enter numerical values."
+        return ""
 
     r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
     n = n = time_years * nPP
@@ -57,4 +57,3 @@ with st.container():
         st.write(result)
         result1 = r_n_location(interest_rate, period_time, nPP, time_years)
         st.write(result1)
-
