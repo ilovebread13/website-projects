@@ -39,10 +39,11 @@ with st.container():
     st.write('##')
 
     with right_column:
-        r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
-        n = time_years * nPP
-
-
-    if st.button("Calculate Future value of General Annuity"):
+        
+        if st.button("Calculate Future value of General Annuity"):
         result = calculate_future_value(loan, time_years, period_time, interest_rate, nPP)
         st.write(result)
+        st.write('Your r is:', r)
+        st.write('Your n is:', n)
+
+   
