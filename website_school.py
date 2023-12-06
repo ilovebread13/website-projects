@@ -24,8 +24,7 @@ def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
     P = loan / ((1 - (1+r) ** (-n)) / r)
     future_value = P * ((((1+r) ** n) - 1) / r)
 
-    return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}
-    "
+    return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}"
 
 
 
