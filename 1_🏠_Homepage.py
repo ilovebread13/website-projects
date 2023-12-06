@@ -12,7 +12,7 @@ with st.container():
     st.write('---')
 
 colored_header(
-    label='Contents,
+    label='Contents',
     color(violet-70)
 )
 
