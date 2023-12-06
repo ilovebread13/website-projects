@@ -18,9 +18,10 @@ with st.container():
         color_name='violet-70',
     )
 
-def rain():
+with st.container():
     rain(
         emoji='❄',
+        font_size=32,
         falling_speed=5,
         animation_length='infinite',
     )
