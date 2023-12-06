@@ -4,7 +4,10 @@ from streamlit_extras.let_it_rain import rain
 from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(page_title='Homepage', page_icon=':books:', layout='wide')
-st.sidebar.success('Please select a page from above')
+
+st.sidebar.title('🏫 11-Palladium')
+st.sidebar.caption('Check out the current pages here')
+st.sidebar.markdown('Made by a student')
 
 with st.container():
     rain(
@@ -34,5 +37,9 @@ with st.container():
     if switch_pages:
         switch_page('calculator')
 
+st.sidebar.success('Please select a page from above')
+st.sidebar.write('---\n')
+st.sidebar.caption('If you want to check the source code, [here](https://github.com/ilovebread13/website-projects')
+st.sidebar.write('---\n')
     
 
