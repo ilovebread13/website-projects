@@ -1,6 +1,6 @@
 import streamlit as st
 
-from streamlit_extras.let_it_rain import rain
+
 
 st.set_page_config(page_title='Homepage', page_icon=':books:', layout='wide')
 st.sidebar.success('Please select a page from above')
