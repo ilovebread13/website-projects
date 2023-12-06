@@ -3,8 +3,8 @@ from PIL import Image
 
 st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout='wide')
 
-img_r_formula = Image.open('images/r_formula.png')
-img_n_formula = Image.open('images/n_formula.png')
+img_r_formula = Image.open('C:\Users\FUJITSU\PycharmProjects\pythonProjectimages/r_formula.png')
+img_n_formula = Image.open('C:\Users\FUJITSU\PycharmProjects\pythonProjectimages/n_formula.png')
 
 
 with st.container():
