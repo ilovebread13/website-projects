@@ -1,6 +1,11 @@
 import streamlit as st
+from PIL import Image
 
 st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout='wide')
+
+img_r_formula = Image.open('images/r_formula.png')
+img_n_formula = Image.open('images/n_formula.png')
+
 
 with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
@@ -51,6 +56,11 @@ with st.container():
         interest_rate = st.text_input("Interest rate:")
         nPP = st.text_input("nPP:")
     st.write('##')
+
+    with right_column:
+        st.image(img_r_formula)
+        st.write('##')
+        st.image(img_n_formula)
 
     if st.button("Calculate Future value of General Annuity"):
         result = calculate_future_value(loan, time_years, period_time, interest_rate, nPP)
