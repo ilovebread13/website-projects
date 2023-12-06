@@ -1,12 +1,13 @@
 import streamlit as st
 from PIL import Image
 from streamlit_extras.let_it_rain import rain
-from streamlit_extras.colored_headers import colored_headers
+from streamlit_extras.colored_header import colored_header
+
 st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout='wide')
 
 
-img_r_formula = Image.open('images/r_formula.png')
-img_n_formula = Image.open('images/n_formula.png')
+img_r_formula = Image.open('../images/r_formula.png')
+img_n_formula = Image.open('../images/n_formula.png')
 st.sidebar.success('Please select a page from above')
 
 with st.container():
@@ -18,7 +19,11 @@ with st.container():
     )
 
 with st.container():
-
+    colored_header(
+        label='General Mathematics: Future Value of General Annuity Calculator',
+        color_name='violet-70',
+        
+    )
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
