@@ -29,10 +29,9 @@ with st.container():
         color_name='violet-70',
         description=''
     )
-    def calculator():
-        switch_pages = st.button('Go to Calculator!')
-        if switch_pages:
-            switch_page('2_🧮_Calculator.py')
+    switch_pages = st.button('Go to Calculator!')
+    if switch_pages:
+        switch_page('2_🧮_Calculator.py')
 
     
 
