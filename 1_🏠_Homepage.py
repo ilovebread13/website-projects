@@ -1,5 +1,5 @@
 import streamlit as st
-
+from streamlit_extras.colored_header import colored_header
 
 st.set_page_config(page_title='Homepage', page_icon=':books:', layout='wide')
 st.sidebar.success('Please select a page from above')
@@ -11,10 +11,10 @@ with st.container():
     st.write('##')
     st.write('---')
 
-with st.container():
+colored_header(
     st.subheader('Contents')
     st.write('---')
-
+)
 
 
 
