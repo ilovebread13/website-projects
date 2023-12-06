@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 from streamlit_extras.let_it_rain import rain
-from streamlit_extras.colored_header import colored_header
+
 
 st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout='wide')
 
@@ -18,12 +18,8 @@ with st.container():
         animation_length='infinite',
     )
 
-with st.container():
-    colored_header(
-        label='General Mathematics: Future Value of General Annuity Calculator',
-        color_name='violet-70',
         
-    )
+    
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
