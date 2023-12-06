@@ -5,7 +5,7 @@ st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout
 with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
-    st.subheader('This is will be used to calculate the Future values for the performance task in General Mathematics')
+    st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
     st.write('##')
 
 
