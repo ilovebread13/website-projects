@@ -25,11 +25,12 @@ with st.container():
 
 with st.container():
     colored_header(
-        label='Contents',
+        label='Contents:',
         color_name='violet-70',
         description=''
     )
-    switch_pages = st.button('Go to Calculator!')
+    st.write('##')
+    switch_pages = st.button('1. Go to Calculator!')
     if switch_pages:
         switch_page('calculator')
 
