@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.let_it_rain import rain
+from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(page_title='Homepage', page_icon=':books:', layout='wide')
 st.sidebar.success('Please select a page from above')
@@ -27,5 +28,9 @@ with st.container():
         label='Contents',
         color_name='violet-70',
     )
-
+def calculator():
+    switch_pages = st.button('Go to Calculator!')
+    if switch_pages:
+        switch_page('2_🧮_Calculator.py')
+    
 
