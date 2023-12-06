@@ -17,7 +17,7 @@ def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
         interest_rate = float(interest_rate)
         nPP = float(nPP)
     except ValueError:
-        return None
+        return ""
 
     n = time_years * nPP
     r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
