@@ -2,24 +2,21 @@ import streamlit as st
 from PIL import Image
 from streamlit_extras.let_it_rain import rain
 
-
 st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout='wide')
-
 
 img_r_formula = Image.open('images/r_formula.png')
 img_n_formula = Image.open('images/n_formula.png')
 st.sidebar.success('Please select a page from above')
 
 with st.container():
-     rain(
+    rain(
         emoji='❄',
         font_size=16,
         falling_speed=5,
         animation_length='infinite',
     )
 
-        
-with st.container():    
+with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
@@ -59,6 +56,7 @@ def r_n_location(interest_rate, period_time, nPP, time_years):
 
     return f"Your r is: {r} Your n is: {n}"
 
+
 with st.container():
     left_column, right_column = st.columns((2, 1))
     with left_column:
@@ -70,6 +68,7 @@ with st.container():
     st.write('##')
 
     with right_column:
+        st.write('##')
         st.image(img_r_formula)
         st.write('##')
         st.image(img_n_formula)
