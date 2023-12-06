@@ -6,8 +6,8 @@ from streamlit_extras.let_it_rain import rain
 st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout='wide')
 
 
-img_r_formula = Image.open('../images/r_formula.png')
-img_n_formula = Image.open('../images/n_formula.png')
+img_r_formula = Image.open('images/r_formula.png')
+img_n_formula = Image.open('images/n_formula.png')
 st.sidebar.success('Please select a page from above')
 
 with st.container():
