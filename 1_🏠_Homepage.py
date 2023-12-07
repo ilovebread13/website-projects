@@ -49,9 +49,9 @@ with st.container():
     st.write('---')
     st.write('##')
     with left_column:
-        st.write('Welcome to our site!')
+        st.subheader('Welcome to our site!')
     with right_column:
-        st.lottie(lottie_animation)
+        st.lottie(lottie_animation, height=400)
     st.write('##')
     st.write('---')
 
