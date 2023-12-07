@@ -52,7 +52,7 @@ def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
 
     return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}"
 
-def interest(future_value, loan)
+def interest(future_value, loan):
     try:
         future_value = float(future_value)
         loan = float(loan)
