@@ -17,7 +17,8 @@ img_rocks = Image.open('images/rocks.png')
 
 
 with st.container():
-  st.title('15 interesting rocks from National Geographic')
+  st.title('--15 interesting rocks from National Geographic--')
+  st.write('---')
 
 with st.container():
   col1, col2, col3 = st.columns(3)
