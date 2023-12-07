@@ -4,7 +4,7 @@ from streamlit_extras.let_it_rain import rain
 from streamlit_extras.switch_page_button import switch_page
 
 
-img_rocks = Image.open('images/rocks.png/')
+img_rocks = Image.open('images/rocks.png')
 
 with st.container():
   col1, col2, col3 = st.columns(3)
