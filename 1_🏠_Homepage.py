@@ -37,6 +37,9 @@ with st.container():
     switch_pages = st.button('1. Go to Calculator!')
     if switch_pages:
         switch_page('calculator')
+    switch_pages1 = st.button('2. Go to rocks section!')
+    if switch_pages1:
+        switch_page('rocks')
 
 st.sidebar.success('Please select a page from above')
 st.sidebar.write('---\n')
