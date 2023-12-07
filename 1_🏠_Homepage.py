@@ -43,11 +43,10 @@ with st.container():
         st.image(img_homepage)
     with col3:
         st.write('##')
-
-    left_column, right_column = st.columns((1, 1))
-    
     st.write('---')
     st.write('##')
+
+    left_column, right_column = st.columns((1, 1))
     with left_column:
         st.subheader('Welcome to our site!')
     with right_column:
