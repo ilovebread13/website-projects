@@ -50,7 +50,7 @@ with st.container():
     with left_column:
         st.subheader('Welcome to our site!')
     with right_column:
-        st.lottie(lottie_animation, height=300, width=300)
+        st.lottie(lottie_animation, height=300)
     st.write('##')
     st.write('---')
 
