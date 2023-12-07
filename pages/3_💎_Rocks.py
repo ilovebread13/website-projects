@@ -6,13 +6,22 @@ from streamlit_extras.switch_page_button import switch_page
 
 img_rocks = Image.open('images/rocks.png')
 
+
+st.sidebar.title('🏫 11-Palladium')
+st.sidebar.caption('Check out the current pages here')
+st.sidebar.markdown('Made by a student ❤')
+st.sidebar.markdown('---')
+st.sidebar.success('Please select a page from above')
+st.sidebar.write('---\n')
+st.sidebar.caption('''If you want to check the source code, [here](https://github.com/ilovebread13/website-projects)''')
+st.sidebar.write('---\n')
+
 with st.container():
   st.title('15 interesting rocks from National Geographic')
   
   
-
 with st.container():
-  col1, col2, col3 = st.columns(3)
+  col1, col2, col3 = st.columns((1, 1, 1))
   col1 = st.write('##')
   col2 = st.image(img_rocks)
   col3 = st.write('##')
