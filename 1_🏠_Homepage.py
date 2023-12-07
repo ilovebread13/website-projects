@@ -60,14 +60,15 @@ with st.container():
 with st.container():
     st.subheader('Contents:')
     st.write('##')
-    switch_pages = st.button('1. Go to Calculator!')
+    switch_pages = st.button('1. Go to Calculator! - For the PTask in General Mathemathics.')
     if switch_pages:
         switch_page('calculator')
-    switch_pages1 = st.button('2. Go to rocks section!')
+    switch_pages1 = st.button('2. Go to rocks section! - For the rocks mentioned in the Earth Science class.')
     if switch_pages1:
         switch_page('rocks')
     st.write('---')
     st.subheader('1st Semester, School schedule')
+    st.write('##')
     left_column, right_column = st.columns((1, 1))
     with left_column:
       st.image(img_sched)
