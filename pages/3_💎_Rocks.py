@@ -4,9 +4,6 @@ from streamlit_extras.let_it_rain import rain
 from streamlit_extras.switch_page_button import switch_page
 
 
-img_rocks = Image.open('images/rocks.png')
-
-
 st.sidebar.title('🏫 11-Palladium')
 st.sidebar.caption('Check out the current pages here')
 st.sidebar.markdown('Made by a student ❤')
