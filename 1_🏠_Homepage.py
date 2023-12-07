@@ -72,6 +72,7 @@ with st.container():
     left_column, right_column = st.columns((1, 1))
     with left_column:
       st.image(img_sched)
+      st.write('---')
   
 
 st.sidebar.success('Please select a page from above')
