@@ -52,6 +52,17 @@ def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
 
     return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}"
 
+def interest(future_value, loan)
+    try:
+        future_value = float(future_value)
+        loan = float(loan)
+    except ValueError:
+        return ""
+    interest = future_value - loan
+    return f"Your interest is: {round(interest, 2)}"
+    
+
+    
 
 def r_n_location(interest_rate, period_time, nPP, time_years):
     try:
@@ -90,6 +101,8 @@ with st.container():
         st.write(result)
         result1 = r_n_location(interest_rate, period_time, nPP, time_years)
         st.write(result1)
+        result2 = interest(future_value, loan)
+        st.write(result2)
 
 
 
