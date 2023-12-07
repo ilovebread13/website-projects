@@ -50,7 +50,7 @@ def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
     P = loan / ((1 - (1 + r) ** (-n)) / r)
     future_value = P * ((((1 + r) ** n) - 1) / r)
 
-    return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}"
+    return f"Your future value is: ₱ {round(future_value, 2)} Your P is: ₱ {round(P, 2)}"
 
 
 def calculate_interest(loan, time_years, period_time, interest_rate, nPP):
@@ -68,7 +68,7 @@ def calculate_interest(loan, time_years, period_time, interest_rate, nPP):
     P = loan / ((1 - (1 + r) ** (-n)) / r)
     future_value = P * ((((1 + r) ** n) - 1) / r)
     interest = future_value - loan
-    return f"Your interest is: {round(interest, 2)}"
+    return f"Your interest is: ₱ {round(interest, 2)}"
 
 
 def r_n_location(interest_rate, period_time, nPP, time_years):
