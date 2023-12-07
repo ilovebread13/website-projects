@@ -51,7 +51,7 @@ with st.container():
     with left_column:
         st.write('Welcome to our site!')
     with right_column:
-        st.lottie(lottie_animation, key=school)
+        st.lottie(lottie_animation)
     st.write('##')
     st.write('---')
 
