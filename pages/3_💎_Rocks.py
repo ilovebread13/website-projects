@@ -22,9 +22,9 @@ with st.container():
   
 with st.container():
   col1, col2, col3 = st.columns((1, 1, 1))
-  col1 = st.write('##')
-  col2 = st.image(img_rocks)
-  col3 = st.write('##')
+  with col1 = st.write('##')
+  with col2 = st.image(img_rocks)
+  with col3 = st.write('##')
   switch_pages = st.button('Go back to homepage')
   if switch_pages:
     switch_page('homepage')
