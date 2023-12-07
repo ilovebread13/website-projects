@@ -67,7 +67,7 @@ with st.container():
     if switch_pages1:
         switch_page('rocks')
     st.write('---')
-    st.subheader('1st Semester, School schedule')
+    st.subheader('1st Semester, school schedule:')
     st.write('##')
     left_column, right_column = st.columns((1, 1))
     with left_column:
