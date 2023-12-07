@@ -3,6 +3,20 @@ from PIL import Image
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.let_it_rain import rain
 from streamlit_extras.switch_page_button import switch_page
+import requests
+from streamlit_lottie import st_lottie
+
+img_rocks = Image.open('images/rocks.png')
+def load_lottieurl(url):
+  r = requests.get(url)
+  if r.status_code != 200:
+    return None
+  return r.json()
+  
+
+
+lottie_animation = load_lottieurl('https://lottie.host/ce73d313-af86-45bd-bb1e-a18cd0275b3b/MTNlZXex0j.json')
+
 
 st.set_page_config(page_title='Homepage', page_icon=':books:', layout='wide')
 
@@ -29,10 +43,15 @@ with st.container():
         st.image(img_homepage)
     with col3:
         st.write('##')
+
+    left_column, right_column = st.columns((1, 1))
     
     st.write('---')
     st.write('##')
-    st.markdown("<h2 style='text-align: center; color: white; font_size: 10px;'> Welcome to our website! </h2>", unsafe_allow_html=True)
+    with left_column:
+        st.write('Welcome to our site!')
+    with right column:
+        st.lottie(lottie_animation, key=school)
     st.write('##')
     st.write('---')
 
