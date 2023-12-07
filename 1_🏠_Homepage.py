@@ -67,8 +67,10 @@ with st.container():
     if switch_pages1:
         switch_page('rocks')
     st.write('---')
-    st.write('1st Semester, School schedule)
-    st.image(img_sched)
+    left_column, right_column = st.columns((1, 2))
+    st.write('1st Semester, School schedule')
+    with left_column:
+      st.image(img_sched)
   
 
 st.sidebar.success('Please select a page from above')
