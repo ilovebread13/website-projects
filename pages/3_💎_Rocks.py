@@ -13,6 +13,9 @@ st.sidebar.write('---\n')
 st.sidebar.caption('''If you want to check the source code, [here](https://github.com/ilovebread13/website-projects)''')
 st.sidebar.write('---\n')
 
+img_rocks = Image.open('images/rocks.png')
+
+
 with st.container():
   st.title('15 interesting rocks from National Geographic')
   
