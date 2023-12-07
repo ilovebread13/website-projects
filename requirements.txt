@@ -1,4 +1,0 @@
-streamlit_extras
-streamlit-lottie
-requests
-
