@@ -23,9 +23,12 @@ with st.container():
 
 with st.container():
     col1, col2, col3 = st.columns(3)
-    with col1 = st.write('##')
-    with col2 = st.image(img_homepage)
-    with col3 = st.write('##')
+    with col1:
+        st.write('##')
+    with col2:
+        st.image(img_homepage)
+    with col3:
+        st.write('##')
     
     st.write('---')
     st.write('##')
