@@ -37,16 +37,11 @@ with st.container():
     st.write('---')
 
 with st.container():
-    colored_header(
-        label='Contents:',
-        color_name='violet-70',
-        description=''
-    )
+    st.subheader('Contents:')
     st.write('##')
     switch_pages = st.button('1. Go to Calculator!')
     if switch_pages:
         switch_page('calculator')
-    st.write('##')
     switch_pages1 = st.button('2. Go to rocks section!')
     if switch_pages1:
         switch_page('rocks')
