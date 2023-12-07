@@ -7,6 +7,7 @@ import requests
 from streamlit_lottie import st_lottie
 
 img_rocks = Image.open('images/rocks.png')
+img_sched = Image.open('images/school_sched.png')
 def load_lottieurl(url):
   r = requests.get(url)
   if r.status_code != 200:
@@ -50,6 +51,7 @@ with st.container():
     with left_column:
         st.subheader('❤ Welcome to our site! ❤')
         st.write('• There will be more features in the future, but for now we only have a few.')
+        st.image(img_sched)
     with right_column:
         st.lottie(lottie_animation, height=350)
     st.write('##')
