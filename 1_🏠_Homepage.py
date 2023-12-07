@@ -67,6 +67,7 @@ with st.container():
     if switch_pages1:
         switch_page('rocks')
     st.write('---')
+    st.write('1st Semester, School schedule)
     st.image(img_sched)
   
 
