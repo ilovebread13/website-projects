@@ -46,11 +46,12 @@ with st.container():
     st.write('---')
     st.write('##')
 
-    left_column, right_column = st.columns((1, 1))
+    left_column, right_column = st.columns((2, 1))
     with left_column:
         st.subheader('Welcome to our site!')
+        st.write('There will be more features in the future, but for now we only have a few')
     with right_column:
-        st.lottie(lottie_animation, height=300)
+        st.lottie(lottie_animation, height=350)
     st.write('##')
     st.write('---')
 
