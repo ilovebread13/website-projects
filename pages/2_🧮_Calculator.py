@@ -49,10 +49,10 @@ def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
     r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
     P = loan / ((1 - (1 + r) ** (-n)) / r)
     future_value = P * ((((1 + r) ** n) - 1) / r)
-    interes = future_value - loan
+    interest = future_value - loan
 
-    return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}"
-        f"Your interest is: {round(interest, 2)}"
+    return f"Your future value is: {round(future_value, 2)} Your P is: {round(P, 2)}"f"Your interest is: {round(interest, 2)}"
+
 
 def interest(future_value, loan):
     try:
@@ -62,9 +62,7 @@ def interest(future_value, loan):
         return ""
     interest = future_value - loan
     return f"Your interest is: {round(interest, 2)}"
-    
 
-    
 
 def r_n_location(interest_rate, period_time, nPP, time_years):
     try:
@@ -103,7 +101,7 @@ with st.container():
         st.write(result)
         result1 = r_n_location(interest_rate, period_time, nPP, time_years)
         st.write(result1)
-       
+
 
 
 
