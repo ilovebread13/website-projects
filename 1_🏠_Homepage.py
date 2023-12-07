@@ -51,7 +51,7 @@ with st.container():
     with left_column:
         st.subheader('❤ Welcome to our site! ❤')
         st.write('• There will be more features in the future, but for now we only have a few.')
-        st.image(img_sched)
+        
     with right_column:
         st.lottie(lottie_animation, height=350)
     st.write('##')
@@ -66,6 +66,9 @@ with st.container():
     switch_pages1 = st.button('2. Go to rocks section!')
     if switch_pages1:
         switch_page('rocks')
+    st.write('---')
+    st.image(img_sched)
+  
 
 st.sidebar.success('Please select a page from above')
 st.sidebar.write('---\n')
