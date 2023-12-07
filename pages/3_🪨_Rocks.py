@@ -5,3 +5,9 @@ from streamlit_extras.switch_page_button import switch_page
 
 
 img_rocks = Image.open('/images/images (4).jpeg')
+
+with st.container():
+  col1, col2, col3 = st.columns(3)
+  col1 = st.write('##')
+  col2 = st.image(img_rocks)
+  col3 = st.write('##')
