@@ -61,7 +61,7 @@ def calculate_interest(loan, time_years, period_time, interest_rate, nPP):
         interest_rate = float(interest_rate)
         nPP = float(nPP)
     except ValueError:
-        return "Invalid input. Please enter numerical values."
+        return ""
 
     n = time_years * nPP
     r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
@@ -110,6 +110,7 @@ with st.container():
         st.write(result1)
         result2 = calculate_interest(loan, time_years, period_time, interest_rate, nPP)
         st.write(result2)
+    st.write('---')
 
 
 
