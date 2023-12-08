@@ -28,11 +28,9 @@ with st.container():
 with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
-    switch_pages = st.button('Go back to homepage')
-    if switch_pages:
-        switch_page('homepage')
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
-    st.write('##')
+    
+    
 
 
 def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
@@ -111,6 +109,10 @@ with st.container():
         result2 = calculate_interest(loan, time_years, period_time, interest_rate, nPP)
         st.write(result2)
     st.write('---')
+    switch_pages = st.button('Go back to homepage')
+    if switch_pages:
+        switch_page('homepage')
+    st.write('##')
 
 
 
