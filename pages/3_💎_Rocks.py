@@ -3,7 +3,7 @@ from PIL import Image
 from streamlit_extras.let_it_rain import rain
 from streamlit_extras.switch_page_button import switch_page
 
-st.set_page_config(page_title='Rocks', page_icon=':diamond:',)
+st.set_page_config(page_title='Rocks', page_icon=':diamond:', layout='wide')
 st.sidebar.title('🏫 11-Palladium')
 st.sidebar.caption('Check out the current pages here')
 st.sidebar.markdown('Made by a student ❤')
