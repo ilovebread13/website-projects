@@ -34,6 +34,7 @@ with st.container():
     st.image(img_rocks)
   with col3:
     st.write('##')
+  st.write('---')
   switch_pages = st.button('Go back to homepage')
   if switch_pages:
     switch_page('homepage')
