@@ -68,7 +68,8 @@ def calculate_option2(down_payment, periodic_payment, interest_rate, time_years,
     PV = periodic_payment * ((1 - ((1 + r) ** (-n))) / r)
     EV = PV + down_payment
     return (f'For option 2, your economic value is: ₱ {round(EV, 2)} '
-            f'Your present value is: ₱ {round(PV, 2)}')
+            f'Your present value is: ₱ {round(PV, 2)} '
+            f'Your r is: {r}')
 
 def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment):
     try:
