@@ -136,7 +136,7 @@ with st.container():
 st.write('---')
 st.subheader('This will be the calculator for the performance task in General Mathematics as well. Use this for checking the answers and values')
 switch_pages = st.button('Go back to homepage')
-with st.container:
+with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
         periodic_payment = st.text_input('Periodic payment (R): ')
@@ -153,7 +153,7 @@ with st.container:
         st.write('##')
         st.image(img_tnopp)
         st.write('##')
-    
+
     if st.button('Calculate Present value of deferred annuity'):
         result = calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment)
         st.write(result)
