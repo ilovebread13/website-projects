@@ -43,7 +43,7 @@ def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compoundi
         interest_rate = float(interest_rate)
         compounding_period = float(compounding_period)
         time_years = float(time_years)
-        payment = 1
+        payment = (payment)
 
         if payment == 'Y':
             D = deferred_periods * compounding_period - payment
