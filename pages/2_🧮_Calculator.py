@@ -52,7 +52,7 @@ def calculate_option1(down_payment, future_value, interest_rate, time_years):
             f'Your present value is: ₱ {round(PV, 2)}')
 
 
-def calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP, ):
+def calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP):
     try:
         down_payment = float(down_payment)
         periodic_payment = float(periodic_payment)
@@ -64,7 +64,7 @@ def calculate_option2(down_payment, periodic_payment, interest_rate, time_years,
         return 'Invalid input. Please enter numerical values.'
 
     n = time_years * nPP
-    r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
+    r = (1 + (interest_rate / compounding_period)) ** (compounding_period / nPP) - 1
     PV = periodic_payment * ((1 - ((1 + r) ** (-n))) / r)
     EV = PV + down_payment
     return (f'Your economic value is: ₱ {round(EV, 2)} '
@@ -209,6 +209,9 @@ with st.container():
         future_value = st.text_input('Compounding period (m): ')
         interest_rate = st.text_input('Interest rate (i): ')
         time_years = st.text_input('Time in years (t): ')
+        periodic_payment = st.text_input('Periodic payment (P): ')
+        compounding_period = st.text_input('Compounding period (m): ')
+        nPP = st.text_input('No. of payments (nPP):')
     with col2:
         st.write('##')
         st.image(img_pvci)
@@ -216,6 +219,9 @@ with st.container():
     if st.button('Calculate the value for the present value of compound interest, option 1'):
         result = calculate_option1(down_payment, future_value, interest_rate, time_years)
         st.write(result)
+        result1 = calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP)
+        st.write(result1)
+
 
 st.write('---')
 switch_pages = st.button('Go back to homepage')
