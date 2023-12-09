@@ -45,7 +45,7 @@ def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compoundi
         time_years = float(time_years)
         payment = float(payment)
 
-        if payment == 'Y':
+        if payment == 1:
             D = deferred_periods * compounding_period - payment
         else:
             D = deferred_periods * compounding_period
@@ -144,7 +144,7 @@ with st.container():
         interest_rate = st.text_input('Interest rate (I): ')
         compounding_period = st.text_input('Compounding period (M): ')
         time_years = st.text_input('Time in years (T): ')
-        payment = st.text_input('Did the person pay? Y/N, if not, leave blank: ')
+        payment = st.text_input('Did the person pay? put 1, if not, leave blank: ')
     with col2:
         st.write('##')
         st.image(img_pvdef)
