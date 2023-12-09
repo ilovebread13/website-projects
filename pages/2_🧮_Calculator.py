@@ -11,7 +11,7 @@ img_pvdef = Image.open('images/pvdef.PNG')
 img_rate_formula = Image.open('images/rate.PNG')
 img_tnopp = Image.open('images/tnopp.PNG')
 img_future = Image.open('images/future.png')
-
+img_pvci = Image.open('images/pvci.png')
 
 
 st.sidebar.title('🏫 11-Palladium')
@@ -37,19 +37,38 @@ with st.container():
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
 
 
-def calculate_economic_val(periodic_payment, interest_rate, compounding_period, time_years):
+def calculate_option1(down_payment, future_value, interest_rate, time_years):
     try:
-        periodic_payment = float(periodic_payment)
+        down_payment = float(down_payment)
+        future_value = float(future_value)
         interest_rate = float(interest_rate)
-        compounding_period = float(compounding_period)
         time_years = float(time_years)
     except ValueError:
         return 'Invalid input. Please enter numerical values.'
 
-    r = interest_rate / compounding_period
-    n = time_years * compounding_period
-    FV = periodic_payment * ((((1+r) ** n) - 1) / r)
-    return f'Your future value is: ₱ {round(FV, 2)} '
+    PV = (future_value / ((1 + interest_rate) ** time_years))
+    EV = PV + down_payment
+    return (f'Your economic value is: ₱ {round(EV, 2)} '
+            f'Your present value is: ₱ {round(PV, 2)}')
+
+
+def calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP, ):
+    try:
+        down_payment = float(down_payment)
+        periodic_payment = float(periodic_payment)
+        interest_rate = float(interest_rate)
+        time_years = float(time_years)
+        compounding_period = float(compounding_period)
+        nPP = float(nPP)
+    except ValueError:
+        return 'Invalid input. Please enter numerical values.'
+
+    n = time_years * nPP
+    r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
+    PV = periodic_payment * ((1 - ((1 + r) ** (-n))) / r)
+    EV = PV + down_payment
+    return (f'Your economic value is: ₱ {round(EV, 2)} '
+            f'Your present value is: ₱ {round(PV, 2)}')
 
 def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment):
     try:
@@ -177,21 +196,25 @@ with st.container():
                                  payment)
         st.write(result)
 
+
+
+
+
 st.write('---')
-st.subheader('A calculator for getting the future value of ordinary annuity for the fair market value as well.')
+st.subheader('|LIMITED| A calculator made for getting the answers/values for the option 1 and option 2 in fair market value.')
 with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
-        periodic_payment = st.text_input('Periodic payment (P): ')
+        down_payment = st.text_input('Down payment (DP) : ')
+        future_value = st.text_input('Compounding period (m): ')
         interest_rate = st.text_input('Interest rate (i): ')
-        compounding_period = st.text_input('Compounding period (m): ')
         time_years = st.text_input('Time in years (t): ')
     with col2:
         st.write('##')
-        st.image(img_future)
+        st.image(img_pvci)
 
-    if st.button('Calculate the future value of ordinary annuity'):
-        result = calculate_economic_val(periodic_payment, interest_rate, compounding_period, time_years)
+    if st.button('Calculate the value for the present value of compound interest, option 1'):
+        result = calculate_option1(down_payment, future_value, interest_rate, time_years)
         st.write(result)
 
 st.write('---')
