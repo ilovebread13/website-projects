@@ -191,7 +191,7 @@ with st.container():
         st.image(img_future)
 
     if st.button('Calculate the future value of ordinary annuity'):
-        result = calculate_future_value(periodic_payment, interest_rate, compounding_period, time_years)
+        result = calculate_economic_val(periodic_payment, interest_rate, compounding_period, time_years)
         st.write(result)
 
 st.write('---')
