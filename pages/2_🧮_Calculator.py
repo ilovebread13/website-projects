@@ -36,6 +36,26 @@ with st.container():
     st.write('---')
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
 
+def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment):
+    try:
+        periodic_payment = float(periodic_payment)
+        deferred_periods = float(deferred_periods)
+        interest_rate = float(interest_rate)
+        compounding_period = float(compounding_period)
+        time_years = float(time_years)
+        payment = 1
+
+        if payment == 'Y':
+            D = deferred_periods * compounding_period - payment
+        else:
+            D = deferred_periods * compounding_period
+    except ValueError:
+        return 'Invalid input. Please enter numerical values.'
+    r = interest_rate / compounding_period
+    p = compounding_period * time_years
+    PV_def = periodic_payment * ((((1 + r) * (-deferred_periods)) - ((1 + r) * -(p + deferred_periods))) / r)
+    return (f'Your present value deferred annuity is: {round(PV_def, 2)} Your D is: {D} '
+            f'Your r is: {r} ' f'Your p is: {p}')
 
 def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
     try:
@@ -119,12 +139,12 @@ switch_pages = st.button('Go back to homepage')
 with st.container:
     col1, col2 = st.columns((2, 1))
     with col1:
-        st.text_input('Periodic payment (R): ')
-        st.text_input('Number of deferred periods (D): ')
-        st.text_input('Interest rate (I): ')
-        st.text_input('Compounding period (M): ')
-        st.text_input('Time in years (T): ')
-        st.text_input('Did the person pay? Y/N, if not, leave blank: ')
+        periodic_payment = st.text_input('Periodic payment (R): ')
+        deferred_periods = st.text_input('Number of deferred periods (D): ')
+        interest_rate = st.text_input('Interest rate (I): ')
+        compounding_period = st.text_input('Compounding period (M): ')
+        time_years = st.text_input('Time in years (T): ')
+        payment = st.text_input('Did the person pay? Y/N, if not, leave blank: ')
     with col2:
         st.write('##')
         st.image(img_pvdef)
@@ -133,6 +153,10 @@ with st.container:
         st.write('##')
         st.image(img_tnopp)
         st.write('##')
+    
+    if st.button('Calculate Present value of deferred annuity'):
+        result = calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment)
+        st.write(result)
 
 
 
