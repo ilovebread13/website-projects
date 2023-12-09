@@ -221,8 +221,8 @@ with st.container():
         result = calculate_option1(down_payment, future_value, interest_rate, time_years)
     if st.button('Calculate the value for the option 2'):
         result1 = calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP)
-        st.write(result)
         st.write(result1)
+        st.write(result)
 
 st.write('---')
 switch_pages = st.button('Go back to homepage')
