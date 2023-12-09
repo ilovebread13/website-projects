@@ -10,7 +10,7 @@ img_n_formula = Image.open('images/n_formula.png')
 img_pvdef = Image.open('images/pvdef.PNG')
 img_rate_formula = Image.open('images/rate.PNG')
 img_tnopp = Image.open('images/tnopp.PNG')
-
+img_future = Image.open('images/future.png')
 
 
 
@@ -36,6 +36,21 @@ with st.container():
     st.write('---')
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
 
+
+def calculate_economic_val(periodic_payment, interest_rate, compounding_period, time_years):
+    try:
+        periodic_payment = float(periodic_payment)
+        interest_rate = float(interest_rate)
+        compounding_period = float(compounding_period)
+        time_years = float(time_years)
+    except ValueError:
+        return 'Invalid input. Please enter numerical values.'
+
+    r = interest_rate / compounding_period
+    n = time_years * compounding_period
+    FV = periodic_payment * ((((1+r) ** n) - 1) / r)
+    return f'Your future value is: ₱ {round(FV, 2)} '
+
 def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment):
     try:
         periodic_payment = float(periodic_payment)
@@ -57,8 +72,9 @@ def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compoundi
     r = interest_rate / compounding_period
     p = compounding_period * time_years
     PV_def = periodic_payment * ((((1 + r) ** (-deferred_periods)) - ((1 + r) ** -(p + deferred_periods))) / r)
-    return (f'Your present value deferred annuity is: {round(PV_def, 2)} Your D is: {D} '
+    return (f'Your present value deferred annuity is: ₱ {round(PV_def, 2)} Your D is: {D} '
             f'Your r is: {r} ' f'Your p is: {p}')
+
 
 def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
     try:
@@ -137,7 +153,7 @@ with st.container():
         st.write(result2)
 
 st.write('---')
-st.subheader('This will be the calculator for the performance task in General Mathematics as well. Use this for checking the answers and values')
+st.subheader('A calculator for getting the present value of deferred annuity')
 with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
@@ -157,7 +173,25 @@ with st.container():
         st.write('##')
 
     if st.button('Calculate Present value of deferred annuity'):
-        result = calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment)
+        result = calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years,
+                                 payment)
+        st.write(result)
+
+st.write('---')
+st.subheader('A calculator for getting the future value of ordinary annuity for the fair market value as well.')
+with st.container():
+    col1, col2 = st.columns((2, 1))
+    with col1:
+        periodic_payment = st.text_input('Periodic payment (R): ')
+        interest_rate = st.text_input('Interest rate (I): ')
+        compounding_period = st.text_input('Compounding period (M): ')
+        time_years = st.text_input('Time in years (T): ')
+    with col2:
+        st.write('##')
+        st.image(img_future)
+        
+    if st.button('Calculate the future value of ordinary annuity'):
+        result = calculate_future_value(periodic_payment, interest_rate, compounding_period, time_years)
         st.write(result)
 
 st.write('---')
