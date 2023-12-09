@@ -216,7 +216,7 @@ with st.container():
         st.write('##')
         st.image(img_pvci)
 
-    if st.button('Calculate the value for the present value of compound interest, option 1'):
+    if st.button('Calculate the value of option 1 and option 2'):
         result = calculate_option1(down_payment, future_value, interest_rate, time_years)
         st.write(result)
         result1 = calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP)
