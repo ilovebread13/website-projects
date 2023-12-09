@@ -13,7 +13,6 @@ img_tnopp = Image.open('images/tnopp.PNG')
 img_future = Image.open('images/future.png')
 img_pvci = Image.open('images/pvci.png')
 
-
 st.sidebar.title('🏫 11-Palladium')
 st.sidebar.caption('Check out the current pages here')
 st.sidebar.markdown('Made by a student ❤')
@@ -70,6 +69,7 @@ def calculate_option2(down_payment, periodic_payment, interest_rate, time_years,
     return (f'For option 2, your economic value is: ₱ {round(EV, 2)}, '
             f'Your present value is: ₱ {round(PV, 2)}, '
             f'Your r is: {r}')
+
 
 def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment):
     try:
@@ -143,7 +143,7 @@ def r_n_location(interest_rate, period_time, nPP, time_years):
         return ""
 
     r = (1 + (interest_rate / period_time)) ** (period_time / nPP) - 1
-    n = n = time_years * nPP
+    n = time_years * nPP
 
     return f"Your r is: {r} Your n is: {n}"
 
@@ -197,12 +197,9 @@ with st.container():
                                  payment)
         st.write(result)
 
-
-
-
-
 st.write('---')
-st.subheader('|LIMITED| A calculator made for getting the answers/values for the option 1 and option 2 in fair market value.')
+st.subheader(
+    '|LIMITED| A calculator made for getting the answers/values for the option 1 and option 2 in fair market value.')
 with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
@@ -225,13 +222,8 @@ with st.container():
         result1 = calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP)
         st.write(result1)
 
-
 st.write('---')
 switch_pages = st.button('Go back to homepage')
 if switch_pages:
     switch_page('homepage')
 st.write('##')
-
-
-
-
