@@ -206,7 +206,7 @@ with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
         down_payment = st.text_input('Down payment (DP) : ')
-        future_value = st.text_input('Compounding period (m): ')
+        future_value = st.text_input('Future value (FV): ')
         interest_rate = st.text_input('Interest rate (i): ')
         time_years = st.text_input('Time in years (t): ')
         periodic_payment = st.text_input('Periodic payment (P): ')
