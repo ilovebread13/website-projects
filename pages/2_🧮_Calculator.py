@@ -56,7 +56,7 @@ def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compoundi
         return 'Invalid input. Please enter numerical values.'
     r = interest_rate / compounding_period
     p = compounding_period * time_years
-    PV_def = periodic_payment * ((((1 + r) * (-deferred_periods)) - ((1 + r) * -(p + deferred_periods))) / r)
+    PV_def = periodic_payment * ((((1 + r) ** (-deferred_periods)) - ((1 + r) ** -(p + deferred_periods))) / r)
     return (f'Your present value deferred annuity is: {round(PV_def, 2)} Your D is: {D} '
             f'Your r is: {r} ' f'Your p is: {p}')
 
