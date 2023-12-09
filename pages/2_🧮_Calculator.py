@@ -48,7 +48,7 @@ def calculate_option1(down_payment, future_value, interest_rate, time_years):
 
     PV = (future_value / ((1 + interest_rate) ** time_years))
     EV = PV + down_payment
-    return (f'Your economic value is: ₱ {round(EV, 2)} '
+    return (f'For option 1, your economic value is: ₱ {round(EV, 2)} '
             f'Your present value is: ₱ {round(PV, 2)}')
 
 
@@ -67,7 +67,7 @@ def calculate_option2(down_payment, periodic_payment, interest_rate, time_years,
     r = (1 + (interest_rate / compounding_period)) ** (compounding_period / nPP) - 1
     PV = periodic_payment * ((1 - ((1 + r) ** (-n))) / r)
     EV = PV + down_payment
-    return (f'Your economic value is: ₱ {round(EV, 2)} '
+    return (f'For option 2, your economic value is: ₱ {round(EV, 2)} '
             f'Your present value is: ₱ {round(PV, 2)}')
 
 def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment):
@@ -216,7 +216,7 @@ with st.container():
         st.write('##')
         st.image(img_pvci)
 
-    if st.button('Calculate the value of option 1 and option 2'):
+    if st.button('Calculate the value for the present value of compound interest, option 1'):
         result = calculate_option1(down_payment, future_value, interest_rate, time_years)
         st.write(result)
         result1 = calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP)
