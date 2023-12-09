@@ -7,6 +7,12 @@ st.set_page_config(page_title='General Mathematics', page_icon=':books:', layout
 
 img_r_formula = Image.open('images/r_formula.png')
 img_n_formula = Image.open('images/n_formula.png')
+img_pvdef = Image.open('images/pvdef.PNG')
+img_rate_formula = Image.open('images/rate.PNG')
+img_tnopp = Image.open('images/tnopp.PNG')
+
+
+
 
 st.sidebar.title('🏫 11-Palladium')
 st.sidebar.caption('Check out the current pages here')
@@ -29,8 +35,6 @@ with st.container():
     st.title("General Mathematics: Future Value of General Annuity Calculator")
     st.write('---')
     st.subheader('This will be used to calculate the Future values for the performance task in General Mathematics')
-    
-    
 
 
 def calculate_future_value(loan, time_years, period_time, interest_rate, nPP):
@@ -108,11 +112,33 @@ with st.container():
         st.write(result1)
         result2 = calculate_interest(loan, time_years, period_time, interest_rate, nPP)
         st.write(result2)
-    st.write('---')
-    switch_pages = st.button('Go back to homepage')
-    if switch_pages:
-        switch_page('homepage')
-    st.write('##')
+
+st.write('---')
+st.subheader('This will be the calculator for the performance task in General Mathematics as well. Use this for checking the answers and values')
+switch_pages = st.button('Go back to homepage')
+with st.container:
+    col1, col2 = st.columns((2, 1))
+    with col1:
+        st.text_input('Periodic payment (R): ')
+        st.text_input('Number of deferred periods (D): ')
+        st.text_input('Interest rate (I): ')
+        st.text_input('Compounding period (M): ')
+        st.text_input('Time in years (T): ')
+        st.text_input('Did the person pay? Y/N, if not, leave blank: ')
+    with col2:
+        st.write('##')
+        st.image(img_pvdef)
+        st.write('##')
+        st.image(img_rate_formula)
+        st.write('##')
+        st.image(img_tnopp)
+        st.write('##')
+
+
+
+if switch_pages:
+    switch_page('homepage')
+st.write('##')
 
 
 
