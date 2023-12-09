@@ -220,6 +220,7 @@ with st.container():
     if st.button('Calculate the value for the present value of compound interest, option 1'):
         result = calculate_option1(down_payment, future_value, interest_rate, time_years)
         st.write(result)
+    if st.button('Calculate the value for the option 2'):
         result1 = calculate_option2(down_payment, periodic_payment, interest_rate, time_years, compounding_period, nPP)
         st.write(result1)
 
