@@ -51,7 +51,7 @@ def calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compoundi
             D = deferred_periods * compounding_period
         elif payment > 1:
             D = deferred_periods * compounding_period
-            
+
     except ValueError:
         return 'Invalid input. Please enter numerical values.'
     r = interest_rate / compounding_period
@@ -138,7 +138,6 @@ with st.container():
 
 st.write('---')
 st.subheader('This will be the calculator for the performance task in General Mathematics as well. Use this for checking the answers and values')
-switch_pages = st.button('Go back to homepage')
 with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
@@ -161,8 +160,8 @@ with st.container():
         result = calculate_pvdef(periodic_payment, deferred_periods, interest_rate, compounding_period, time_years, payment)
         st.write(result)
 
-
-
+st.write('---')
+switch_pages = st.button('Go back to homepage')
 if switch_pages:
     switch_page('homepage')
 st.write('##')
