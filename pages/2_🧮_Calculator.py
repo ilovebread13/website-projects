@@ -182,10 +182,10 @@ st.subheader('A calculator for getting the future value of ordinary annuity for 
 with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
-        periodic_payments = st.text_input('Periodic payment (R): ')
-        interest_rates = st.text_input('Interest rate (I): ')
-        compounding_periods = st.text_input('Compounding period (M): ')
-        time_in_years = st.text_input('Time in years (T): ')
+        periodic_payments = st.text_input('Periodic payment (P): ')
+        interest_rates = st.text_input('Interest rate (i): ')
+        compounding_periods = st.text_input('Compounding period (m): ')
+        time_in_years = st.text_input('Time in years (t): ')
     with col2:
         st.write('##')
         st.image(img_future)
